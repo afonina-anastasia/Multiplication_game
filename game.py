@@ -12,7 +12,12 @@ if __name__ == "__main__":
         try:
             answer = int(input('Enter your answer: '))
         except ValueError:
-            answer = int(input('Enter your answer: '))
+            print(
+                "That's the wrong answer!")
+            list_s.append((f'Q{i}: {first} * {second} = ?; '
+                           f'Student Answer: There was no answer;'
+                           f'Answer: {result}; Status: Wrong '))
+            continue
 
         if answer == result:
             right += 1
